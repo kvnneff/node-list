@@ -1,0 +1,14 @@
+{
+    "name": "element-list",
+    "version": "1.0.0",
+    "description": "returns an object list of all elements with ID or NAME",
+    "main": "index.js",
+    "scripts": ["index.js"],
+    "repo": "staygrimm/element-list",
+    "license": "MIT",
+    "development": {
+        "component/assert": "*",
+        "component/domify": "*",
+        "visionmedia/mocha": "*"
+    }
+}
