@@ -1,4 +1,4 @@
-element-list
+node-list
 ===
 
 Returns an object list with all IDs or NAMEs within an element.
@@ -6,12 +6,12 @@ Returns an object list with all IDs or NAMEs within an element.
 Installation
 ---
 
-    $ component install staygrimm/element-list
+    $ component install staygrimm/node-list
 
 API
 ---
 
-**elementList({parentElement: document, includeNames: false});**
+**nodeList({parentElement: document, includeNames: false});**
 
 Retrieve a list of elements with IDs and (optional) NAMEs contained within the given `parentElement`.
 
@@ -23,10 +23,10 @@ Example
     </body>
 
 
-    var elementList = require('element-list'),
+    var nodeList = require('node-list'),
         nodes;
 
-    nodes = elementList();
+    nodes = nodeList();
 
     console.log(nodes.div1);
     console.log(nodes['div-2']);
