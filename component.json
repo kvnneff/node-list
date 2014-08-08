@@ -1,10 +1,11 @@
 {
-    "name": "element-list",
+    "name": "node-list",
     "version": "1.0.0",
     "description": "returns an object list of all elements with ID or NAME",
     "main": "index.js",
     "scripts": ["index.js"],
-    "repo": "staygrimm/element-list",
+    "author": "river grimm",
+    "repo": "staygrimm/node-list",
     "license": "MIT",
     "development": {
         "component/assert": "*",
