@@ -10,4 +10,4 @@ clean:
 test: build
 	@open test/index.html
 
-.PHONY: clean test
+.PHONY: clean test build
