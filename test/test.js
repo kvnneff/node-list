@@ -9,19 +9,6 @@ describe('elementList(options)', function () {
         assert(list['mocha']);
         assert(list['mocha-report']);
         assert(list['mocha-stats']);
-        assert(list['test-input'] ===  undefined);
+        assert(list['test'] ===  undefined);
     });
-
-    it('should support options.parentEl', function () {
-        var parentEl = document.getElementById('test');
-        var list = elementList({parentEl: parentEl});
-        assert(list['test-form']);
-        assert(list['test'] === undefined);
-    });
-
-    it ('should support options.includeNames', function () {
-        var list = elementList({includeNames: true});
-        assert(list['test-input']);
-    });
-
 });
