@@ -22,6 +22,7 @@ Example
         <div id="div-2"></div>
     </body>
 
+&nbsp;
 
     var nodeList = require('node-list'),
         nodes;
