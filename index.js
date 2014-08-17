@@ -7,13 +7,13 @@
  * @api public
  */
 module.exports = function (el) {
-    var el = el || document.body;
+    var el = el || document.body,
         ids = {},
         elements = [],
         i = 0,
         length;
 
-    elements = options.parentEl.getElementsByTagName('*');
+    elements = el.getElementsByTagName('*');
     length = elements.length;
 
     for (i, length = elements.length; i < length; ++i) {
