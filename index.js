@@ -1,22 +1,17 @@
 'use strict';
 
 /**
- * Create a node object of all ids and (optional) names
- * @param  {Object} options
- * @param  {boolean} options.includeNames Inlude named elements
- * @param  {DOM Element} options.parentEl The element to select from
+ * Create a node object of all ids and names
+ * @param  {DOM Element} el
  * @return {Object}         Returns a node object
+ * @api public
  */
-module.exports = function (options) {
-    var options = options || {},
+module.exports = function (el) {
+    var el = el || document.body;
         ids = {},
         elements = [],
         i = 0,
-        length,
-        el;
-
-    options.parentEl = options.parentEl || document;
-    options.includeNames = options.includeNames || false;
+        length;
 
     elements = options.parentEl.getElementsByTagName('*');
     length = elements.length;
@@ -25,7 +20,7 @@ module.exports = function (options) {
         el = elements[i];
         if (el.id) {
             ids[el.id] = el;
-        } else if (options.includeNames && el.name) {
+        } else if (el.name) {
             ids[el.name] = elements[i];
         }
     }
