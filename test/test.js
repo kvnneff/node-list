@@ -10,6 +10,6 @@ describe('nodeList(options)', function () {
         assert(list['mocha']);
         assert(list['mocha-report']);
         assert(list['mocha-stats']);
-        assert(list['test']);
+        assert(list['test-input']);
     });
 });

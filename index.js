@@ -1,29 +1,29 @@
 'use strict';
 
 /**
- * Create a node object of all ids and names
+ * Create a node object of all elements with ids and names
  * @param  {DOM Element} el
- * @return {Object}         Returns a node object
+ * @return {Object}
  * @api public
  */
 module.exports = function (el) {
     var el = el || document.body,
-        ids = {},
+        nodes = {},
         elements = [],
         i = 0,
         length;
 
-    elements = el.getElementsByTagName('*');
+    elements = el.querySelectorAll('*');
     length = elements.length;
 
     for (i, length = elements.length; i < length; ++i) {
         el = elements[i];
         if (el.id) {
-            ids[el.id] = el;
+            nodes[el.id] = el;
         } else if (el.name) {
-            ids[el.name] = elements[i];
+            nodes[el.name] = elements[i];
         }
     }
 
-    return ids;
+    return nodes;
 };
