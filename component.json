@@ -1,7 +1,7 @@
 {
     "name": "node-list",
-    "version": "2.0.0",
-    "description": "returns an object list of all elements with ID or NAME",
+    "version": "2.0.1",
+    "description": "creates an object listing all elements in a document with NAME or ID attributes",
     "main": "index.js",
     "scripts": ["index.js"],
     "author": "river grimm",
@@ -10,6 +10,6 @@
     "development": {
         "component/assert": "*",
         "component/domify": "*",
-        "visionmedia/mocha": "*"
+        "mocha/mocha": "*"
     }
 }

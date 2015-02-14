@@ -7,23 +7,19 @@
  * @api public
  */
 module.exports = function (el) {
-    var el = el || document.body,
-        nodes = {},
-        elements = [],
-        i = 0,
-        length;
+    var el = el || document.body;
+    var elements = el.querySelectorAll('*');
+    var length = elements.length;
+    var nodes = {};
+    var i = 0;
 
-    elements = el.querySelectorAll('*');
-    length = elements.length;
-
-    for (i, length = elements.length; i < length; ++i) {
+    for (i; i < length; ++i) {
         el = elements[i];
-        if (el.id) {
-            nodes[el.id] = el;
-        } else if (el.name) {
-            nodes[el.name] = elements[i];
+        if (el.name) {
+            nodes[el.name] = el;
+        } else if (el.id) {
+            nodes[el.id] = elements[i];
         }
     }
-
     return nodes;
 };
