@@ -5,7 +5,7 @@ Returns an object list with all IDs or NAMEs within an element.
 
 Installation
 ---
-component/duo:
+component:
 
     $ component install staygrimm/node-list
 
@@ -18,13 +18,13 @@ API
 
 **nodes([element])**
 
-Creates an object listing all elements with NAME or ID attributes for easy lookup.  If `element` is not given `document.body` will be searched instead.  ID's take precedence over NAMEs if an element has both.
+Creates an object listing all elements with NAME or ID attributes for easy lookup.  If `element` is not given `document.body` will be searched instead.
 
 Example
 ---
     <body>
         <div id="header"></div>
-            <button name="button"></button>
+            <button name="button" id="some-button"></button>
         <div id="footer"></div>
     </body>
 
@@ -34,9 +34,10 @@ Example
     var list;
 
     list = nodes();
-    console.log(nodes.header);
-    console.log(nodes.button);
-    console.log(nodes.footer);
+    console.log(nodes.id.header);
+    console.log(nodes.name.button);
+    console.log(nodes.id['some-button']);
+    console.log(nodes.id.footer);
 
 Tests
 ---
