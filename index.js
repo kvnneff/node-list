@@ -15,11 +15,8 @@ module.exports = function (el) {
 
     for (i; i < length; ++i) {
         el = elements[i];
-        if (el.name) {
-            nodes[el.name] = el;
-        } else if (el.id) {
-            nodes[el.id] = elements[i];
-        }
+        if (el.name) nodes.name[el.name] = el;
+        if (el.id) nodes.id[el.id] = el;
     }
     return nodes;
 };
