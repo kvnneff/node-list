@@ -10,7 +10,7 @@ module.exports = function (el) {
     var el = el || document.body;
     var elements = el.querySelectorAll('*');
     var length = elements.length;
-    var nodes = {};
+    var nodes = {name: {}, id: {}};
     var i = 0;
 
     for (i; i < length; ++i) {
