@@ -1,13 +1,18 @@
-build: components index.js
-	@component build --dev
+build: node_modules builddir
+	@./node_modules/.bin/duo --stdout index.js > build/build.js
 
-components: component.json
-	@component install --dev
+tests: node_modules builddir
+	@./node_modules/.bin/duo --stdout test/index.js > build/test.js
 
+node_modules:
+	npm install
+
+builddir:
+	mkdir -p ./build
 clean:
-	rm -fr build components template.js
+	rm -fr ./build ./components ./node_modules
 
-test: build
-	@open test/index.html
+test: tests
+	@./node_modules/.bin/duo-test -c "make tests" -B build/test.js browser
 
 .PHONY: clean test build
