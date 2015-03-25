@@ -1,15 +1,10 @@
-var Nodes = require('node-list');
-var assert = require('assert');
+var Nodes = require('../');
+var assert = require('component/assert');
 
 describe('Nodes', function () {
     it('searches document.body by default', function () {
         var list = Nodes();
-        assert(list['test']);
-        assert(list['test-form']);
-        assert(list['mocha']);
-        assert(list['mocha-report']);
-        assert(list['mocha-stats']);
-        assert(list['test-input']);
+        assert(list.id['mocha']);
     });
     it('searches a given element', function () {
         var div = document.createElement('div');
@@ -17,7 +12,7 @@ describe('Nodes', function () {
         foo.id = 'foo';
         div.appendChild(foo);
         var list = Nodes(div);
-        assert(list['foo']);
+        assert(list.id['foo']);
     });
     it('finds both names and ids', function () {
         var div = document.createElement('div');
@@ -28,7 +23,7 @@ describe('Nodes', function () {
         div.appendChild(foo);
         div.appendChild(bar);
         var list = Nodes(div);
-        assert(list['foo']);
-        assert(list['bar']);
+        assert(list.id['foo']);
+        assert(list.name['bar']);
     });
 });
