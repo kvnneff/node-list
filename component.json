@@ -1,6 +1,6 @@
 {
     "name": "node-list",
-    "version": "2.0.1",
+    "version": "3.0.0",
     "description": "creates an object listing all elements in a document with NAME or ID attributes",
     "main": "index.js",
     "scripts": ["index.js"],
@@ -9,7 +9,6 @@
     "license": "MIT",
     "development": {
         "component/assert": "*",
-        "component/domify": "*",
-        "mocha/mocha": "*"
+        "component/domify": "*"
     }
 }
